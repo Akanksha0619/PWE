@@ -1,9 +1,16 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}Admin-login{% endblock title %}
-{% block content %}
-<style>
-      .btn-custom {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room-List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        .btn-custom {
             background-color: #AA336A;
             color: white;
             padding: 10px 20px;
@@ -12,17 +19,26 @@
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            text-decoration: none; /* Remove underline */
+            display: inline-block;
         }
         .btn-custom:hover {
             background-color: #8C2255;
         }
-
-</style>
-    <h2 class="text-center mt-5 mb-3">Rooms <span class="text-primary" >List</span></h2>
-
+    </style>
+</head>
+<body>
+   <div>
+        <div class="container-fluid ">
+            <div class="text-center my-4" style="background-color: #AA336A; color: white;">
+                <h1>Room-List</h1>
+                <hr class="w-25 m-auto">
+            </div>
+        </div>         
+   </div>
     {% if user.is_superuser %}
     <div class="text-center pb-3">
-        <a href="{% url 'add_room' %}"class="btn-custom">Add Room</a>
+        <a href="{% url 'add_room' %}" class="btn-custom">Add Room</a>
     </div>
     {% endif %}
 
@@ -55,8 +71,9 @@
                 {% endfor %}
             </div>
         </div>
+        <div class="text-center">
+            <a href="{% url 'index'%}" class="btn-custom">Back To Home</a>
+        </div>
     </section>
-
-
-
-{% endblock content %}
+</body>
+</html>

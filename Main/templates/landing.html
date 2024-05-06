@@ -1,4 +1,4 @@
-{% extends 'base1.html' %}
+{% extends 'base.html' %}
 {% block title %}Index{% endblock %}
 {% load static %}
 
@@ -68,7 +68,7 @@
                     <img src="static/image/images/room1.jpg" class="card-img-top" alt="room1">
                     <div class="card-body">
                         <h5 class="card-title">Dual-Occupancy Room</h5>
-                        <a href="#" class="btn btn-primary" style="background-color: #AA336A; border-color: #AA336A;">Inquire Now</a>
+                        <a href="{% url 'room_list' %}" class="btn btn-primary" style="background-color: #AA336A; border-color: #AA336A;">Inquire Now</a>
 
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                     <img src="static/image/images/room1.jpg" class="card-img-top" alt="room1">
                     <div class="card-body">
                         <h5 class="card-title">Triple-Occupancy Room</h5>
-                       <a href="#" class="btn btn-primary" style="background-color: #AA336A; border-color: #AA336A;">Inquire Now</a>
+                       <a href="{% url 'room_list' %}" class="btn btn-primary" style="background-color: #AA336A; border-color: #AA336A;">Inquire Now</a>
 
                     </div>
                 </div>
