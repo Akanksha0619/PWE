@@ -2,45 +2,48 @@
 {% block title %}contact{% endblock %}
 {% load static %}
 
-{% block content %}
+
+{% block style %}
+ 
+   
 <style>
     .container {
-    max-width: 600px; /* Adjust container width as needed */
-    margin: 0 auto; /* Center the container */
-    padding: 20px; /* Add padding around the container */
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px; 
 }
 
 .text-dark {
-    color: #333; /* Dark text color */
+    color: #333; 
 }
 
 .mt-5 {
-    margin-top: 3rem; /* Large top margin */
+    margin-top: 3rem; 
 }
 
 .text-bold {
-    font-weight: bold; /* Bold text */
+    font-weight: bold; 
 }
 
 .form-group {
-    margin-bottom: 20px; /* Add space between form groups */
+    margin-bottom: 20px; 
 }
 
 label {
-    display: block; /* Make labels block-level for better spacing */
-    margin-bottom: 5px; /* Add space below labels */
+    display: block;
+    margin-bottom: 5px;
 }
 
 .form-control {
-    width: 100%; /* Make form controls full width */
-    padding: 10px; /* Add padding inside form controls */
-    font-size: 16px; /* Set font size for form controls */
-    border: 1px solid #ccc; /* Add border to form controls */
-    border-radius: 5px; /* Add border radius to form controls */
+    width: 100%; 
+    padding: 10px; 
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 textarea.form-control {
-    resize: vertical; /* Allow vertical resizing of textarea */
+    resize: vertical; 
 }
 
  .btn-custom {
@@ -62,6 +65,8 @@ textarea.form-control {
 }
 
 </style>
+{% endblock %}
+{% block content %}
   <body>
     <div class="container text-dark">
         <h2 class="mt-5 text-bold">Contact Us</h2>

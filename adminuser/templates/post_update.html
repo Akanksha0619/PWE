@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-
-{% block content %}
+{% block style %}
+ 
 <style>
-    /* Style for the form container */
+   
     .form-container {
         max-width: 500px;
         margin: 0 auto;
@@ -12,13 +12,11 @@
         border-radius: 5px;
     }
 
-    /* Style for the form heading */
     .form-heading {
         font-size: 24px;
         margin-bottom: 20px;
     }
 
-    /* Style for form elements */
     form input[type="text"],
     form textarea {
         width: 100%;
@@ -29,7 +27,6 @@
         box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
     }
 
-    /* Style for the submit button */
     form button[type="submit"] {
         padding: 10px 20px;
         background-color: #007bff;
@@ -39,12 +36,13 @@
         cursor: pointer;
     }
 
-    /* Style for the submit button on hover */
     form button[type="submit"]:hover {
         background-color: #0056b3;
     }
 </style>
 
+{% endblock %}
+{% block content %}
 <div class="form-container">
     <h2 class="form-heading">Edit Post</h2>
     <form method="post" enctype="multipart/form-data">

@@ -1,47 +1,48 @@
 {% extends 'base.html' %}
-
-{% block content %}
+{% block style %}
+ 
 <style>
-    /* CSS for the article image */
-.article-image {
-    max-width: 100%; /* Set maximum width to prevent image overflow */
-    height: auto; /* Automatically adjust height to maintain aspect ratio */
-    width: 300px; /* Set the desired width */
-    margin-top: 10px; /* Add margin to separate image from text */
-}
-
-    /* Common CSS for all posts */
-    .post {
-        margin-bottom: 20px; /* Add bottom margin */
-        margin-top: 5px; /* Add bottom margin */
-        padding: 10px;
-        border-radius: 5px;
-        background-color: #f8f9fa;
-        width: 60%;
-        margin: auto;
+   
+    .article-image {
+        max-width: 100%; 
+        height: auto; 
+        width: 300px;
+        margin-top: 10px; 
     }
-
-    .article-metadata {
-        margin-bottom: 5px;
-    }
-
-    .article-title {
-        text-decoration: none;
-        color: black;
-    }
-
-    .article-title:hover {
-        text-decoration: underline;
-    }
-
-    /* Style for full-size image */
-    .full-size-image {
-        width: 100%; /* Adjust as needed */
-        height: auto;
-        margin-top: 10px;
-    }
-</style>
-
+    
+        .post {
+            margin-bottom: 20px; 
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+            width: 60%;
+            margin: auto;
+        }
+    
+        .article-metadata {
+            margin-bottom: 5px;
+        }
+    
+        .article-title {
+            text-decoration: none;
+            color: black;
+        }
+    
+        .article-title:hover {
+            text-decoration: underline;
+        }
+    
+       
+        .full-size-image {
+            width: 50%; 
+            height: auto;
+            margin-top: 10px;
+        }
+    </style>
+    
+{% endblock %}
+{% block content %}
 <div class="container">
     {% for post in posts %}
     <!-- All posts have the same class "post" -->

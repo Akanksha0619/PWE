@@ -1,57 +1,59 @@
 {% extends "base.html" %}
-{% block content %}
+{% block style %}
+ 
 <style>
-/* Style for the container */
-.container {
-    margin-top: 20px; /* Add top margin */
-    background-color: #f0f0f0; /* Change background color */
-    padding: 20px; /* Add padding */
-    border-radius: 10px; /* Add border radius */
-}
+    .container {
+        margin-top: 20px; 
+        background-color: #f0f0f0; 
+        padding: 20px;
+        border-radius: 10px; 
+    }
+    
+    /* Style for individual posts */
+    .post {
+        margin-bottom: 40px; 
+        padding: 20px; 
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #ffffff; 
+    }
+    
+    /* Style for the post title */
+    .article-title {
+        color: #333; 
+        text-decoration: none; 
+    }
+    
+    .article-title:hover {
+        text-decoration: underline; 
+    }
+    
 
-/* Style for individual posts */
-.post {
-    margin-bottom: 40px; /* Add bottom margin */
-    padding: 20px; /* Add padding */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px; /* Add border radius */
-    background-color: #ffffff; /* Add background color */
-}
-
-/* Style for the post title */
-.article-title {
-    color: #333; /* Set text color */
-    text-decoration: none; /* Remove underline */
-}
-
-.article-title:hover {
-    text-decoration: underline; /* Add underline on hover */
-}
-
-/* Style for the post metadata */
-.article-metadata {
-    margin-bottom: 10px; /* Add bottom margin */
-}
-
-/* Style for the author's name */
-.article-metadata p {
-    margin-bottom: 5px; /* Add bottom margin */
-    font-weight: bold; /* Make text bold */
-}
-
-/* Style for the date */
-.article-metadata small {
-    color: #666; /* Set text color */
-}
-
-/* Style for the post image */
-.article-image {
-    max-width: 100%; /* Set maximum width */
-    height: auto; /* Automatically adjust height */
-    margin-top: 10px; /* Add top margin */
-}
-
-</style>
+    .article-metadata {
+        margin-bottom: 10px; 
+    }
+    
+  
+    .article-metadata p {
+        margin-bottom: 5px;
+        font-weight: bold; 
+    }
+    
+    /* Style for the date */
+    .article-metadata small {
+        color: #666; 
+    }
+    
+   
+    .article-image {
+        max-width: 50%; 
+        height: auto;
+        margin-top: 10px; 
+    }
+    
+    </style>
+{% endblock %}
+{% block content %}
     <h1>Posts uploaded on {{ date }}</h1>
     {% for post in posts %}
         <article class="media content-section">
