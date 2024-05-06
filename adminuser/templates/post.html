@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    /* CSS for the article image */
+.article-image {
+    max-width: 100%; /* Set maximum width to prevent image overflow */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    width: 300px; /* Set the desired width */
+    margin-top: 10px; /* Add margin to separate image from text */
+}
+
+    /* Common CSS for all posts */
+    .post {
+        margin-bottom: 20px; /* Add bottom margin */
+        margin-top: 5px; /* Add bottom margin */
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #f8f9fa;
+        width: 60%;
+        margin: auto;
+    }
+
+    .article-metadata {
+        margin-bottom: 5px;
+    }
+
+    .article-title {
+        text-decoration: none;
+        color: black;
+    }
+
+    .article-title:hover {
+        text-decoration: underline;
+    }
+
+    /* Style for full-size image */
+    .full-size-image {
+        width: 100%; /* Adjust as needed */
+        height: auto;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="container">
+    {% for post in posts %}
+    <!-- All posts have the same class "post" -->
+    <div  class="post"  style="margin-bottom: 40px;">
+        <article class="media content-section">
+            <img class="rounded-circle article-img" src="{% if post.author.profile.image %}{{ post.author.profile.image.url }}{% endif %}">
+            <div class="media-body">
+                <div class="article-metadata">
+                    <!-- Wrap author's name with anchor tag -->
+                    <h4 class="mr-2"><a href="{% url 'author-profile' post.author.username %}">{{ post.author }}</a></h4>
+                    <!-- Date link -->
+                    <h5 class="text-muted"><a href="{% url 'posts-by-date' post.date_posted|date:'Y' post.date_posted|date:'m' post.date_posted|date:'d' %}">{{ post.date_posted|date:"F d, Y" }}</a></h5><hr>
+                    <h2><a style="color:black " class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+                </div>
+                {% if post.image %}
+                <!-- Wrap image with anchor tag linking to full-size image -->
+                <a href="{{ post.image.url }}" target="_blank">
+                    <img class="article-image fixed-size-image full-size-image" src="{{ post.image.url }}" alt="{{ post.title }}">
+                </a>
+                {% endif %}
+            </div>
+        </article>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
