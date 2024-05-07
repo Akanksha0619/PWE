@@ -1,69 +1,15 @@
 {% extends "base.html" %}
-{% block style %}
- 
-<style>
-    .container {
-        margin-top: 20px; 
-        background-color: #f0f0f0; 
-        padding: 20px;
-        border-radius: 10px; 
-    }
-    
-    /* Style for individual posts */
-    .post {
-        margin-bottom: 40px; 
-        padding: 20px; 
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #ffffff; 
-    }
-    
-    /* Style for the post title */
-    .article-title {
-        color: #333; 
-        text-decoration: none; 
-    }
-    
-    .article-title:hover {
-        text-decoration: underline; 
-    }
-    
-
-    .article-metadata {
-        margin-bottom: 10px; 
-    }
-    
-  
-    .article-metadata p {
-        margin-bottom: 5px;
-        font-weight: bold; 
-    }
-    
-    /* Style for the date */
-    .article-metadata small {
-        color: #666; 
-    }
-    
-   
-    .article-image {
-        max-width: 50%; 
-        height: auto;
-        margin-top: 10px; 
-    }
-    
-    </style>
-{% endblock %}
 {% block content %}
     <h1>Posts uploaded on {{ date }}</h1>
     {% for post in posts %}
         <article class="media content-section">
-            <img class="rounded-circle article-img" src="{{ post.author.profile.image.url }}">
+
             <div class="media-body">
                 <div class="article-metadata">
-                    <p class="mr-2"><a href="{% url 'author-profile' post.author.username %}">{{ post.author }}</a></p>
+                    <p class="mr-2">{{ post.author }}</p>
                     <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
                 </div>
-                <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
+                <h3><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h3>
                 {% if post.image %}
                     <img class="article-image fixed-size-image" src="{{ post.image.url }}" alt="{{ post.title }}" onclick="openImageModal('{{ post.image.url }}', '{{ post.title }}')">
                 {% endif %}

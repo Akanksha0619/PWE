@@ -48,7 +48,7 @@
 <section id='room' class="rooms my-2 py-1 bg-light">
     <div class="container-fluid">
         <div class="text-center my-4" style="background-color: #AA336A; color: white; width: 100%;">
-    <h1>Rooms Section</h1>
+    <h1 class="text-white">Rooms Section</h1>
     <hr class="w-25 m-auto">
 </div>
 
@@ -90,7 +90,7 @@
 <section id='facilities' class="services py-5 bg-light">
   <div class="container-fluid">
     <div class="text-center mb-4">
-      <h1 class="text-white" style="background-color: #AA336A; padding: 10px;">Facilities</h1>
+      <h1 class="text-white" style="background-color: #AA336A; padding: 5px;">Facilities</h1>
       <hr class="w-25 m-auto">
     </div>
     <div class="row">
@@ -168,7 +168,7 @@
 <section id='pricing' class="pricing my-2 py-1">
     <div class="container-fluid">
         <div class="text-center my-4" style="background-color: #AA336A; color: white;">
-            <h1>Pricing</h1>
+            <h1 class="text-white">Pricing</h1>
             <hr class="w-25 m-auto">
         </div>
 
@@ -178,7 +178,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Single-Occupancy Room</h5>
                         <p class="card-text">Price: $XXX per month</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #AA336A; border-color: #AA336A;">Book Now</a>
+                        <a  href="{% url 'user_login' %}" class="btn btn-primary" style="background-color: #AA336A; border-color: #AA336A;">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -187,7 +187,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Double-Occupancy Room</h5>
                         <p class="card-text">Price: $XXX per person per month</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #AA336A; border-color: #AA336A;">Book Now</a>
+                        <a href="{% url 'user_login' %}" class="btn btn-primary" style="background-color: #AA336A; border-color: #AA336A;">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -196,7 +196,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Triple-Occupancy Room</h5>
                         <p class="card-text">Price: $XXX per person per month</p>
-                        <a href="#" class="btn btn-primary" style="background-color: #AA336A; border-color: #AA336A;">Book Now</a>
+                        <a href="{% url 'user_login' %}" class="btn btn-primary" style="background-color: #AA336A; border-color: #AA336A;">Book Now</a>
                     </div>
                 </div>
             </div>
@@ -204,10 +204,10 @@
     </div>
 </section>
 
-<section id="testimonials" class="testimonials py-5">
+<section id="testimonials" class="testimonials py-5" >
     <div class="container-fluid">
     <div class="text-center mb-4">
-      <h1 class="text-white" style="background-color: #AA336A; padding: 10px;">TestimoSnials</h1>
+      <h1 class="text-white" style="background-color: #AA336A; padding: 5px;">Testimonials</h1>
       <hr class="w-25 m-auto">
     </div>
     <div class="row">
@@ -240,10 +240,10 @@
 </section>
 
 
-<section id='about' class="about my-5 py-3">
+<section id='about' class="about my-1 py-3">
   <div class="container-fluid">
         <div class="text-center my-4" style="background-color: #AA336A; color: white; width: 100%;">
-    <h1>About Us</h1>
+    <h1 class="text-white" >About Us</h1>
     <hr class="w-25 m-auto">
 </div>
 
@@ -336,14 +336,13 @@
               </div>
             </div>
           </div>
-          <!-- Add more accordion items as needed -->
         </div>
       </div>
     </section>
   </div>
 </section>
 <footer class="footer" style="background-color: #FFC0CB;">
-    <div class="container">
+    <div class="container my-5 py-5">
         <div class="row">
             <div class="col-md-4">
                 <h3>About Us</h3>
@@ -367,7 +366,7 @@
                     <li><i class="fas fa-envelope"></i> info@example.com</li>
                 </ul>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6 my-5">
                 <ul class="footer-social list-unstyled d-flex justify-content-md-end mb-0">
                     <li class="me-3"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                     <li class="me-3"><a href="#"><i class="fab fa-twitter"></i></a></li>

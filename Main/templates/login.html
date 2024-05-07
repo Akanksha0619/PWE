@@ -5,29 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login-Page</title>
     <style>
-        
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Added a light background color */
+            font-family: Arial, sans-serif; /* Changed font for better readability */
+        }
+
         .login-container {
-            margin: 50px auto;
+            margin: 120px auto;
             width: 380px;
-            padding: 15px;
-            background-color: #f2f2f2;
-            border-radius: 5px;
+            padding: 30px; /* Increased padding for better spacing */
+            background-color: #fff; /* Changed background color to white */
+            border-radius: 10px; /* Increased border-radius for smoother edges */
             text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added a subtle shadow */
         }
 
         h2 {
             font-weight: bold;
             font-size: 24px;
             margin-bottom: 20px;
+            color: #333; /* Changed text color for better contrast */
         }
 
         ul {
             list-style: none;
             padding: 0;
+            margin: 0; /* Removed default margin */
         }
 
         li {
-            margin-bottom: 15px;
+            margin-bottom: 20px; /* Increased margin for better spacing */
         }
 
         label {
@@ -35,37 +44,47 @@
             font-weight: bold;
             margin-bottom: 5px;
             text-align: left;
+            color: #555; /* Changed label color for better visibility */
         }
 
         input[type="text"],
         input[type="password"] {
             width: 100%;
-            padding: 10px;
+            padding: 12px; /* Increased padding for better input area */
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
         }
 
         button.signup-button {
-            width: 20%;
-            padding: 10px;
+            width: 100%;
+            padding: 12px; /* Increased padding for better button appearance */
             background-color: #AA336A;
             font-weight: bold;
             color: #fff;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s; /* Added smooth transition */
+        }
+
+        button.signup-button:hover {
+            background-color: #8E235C; /* Darker color on hover for better feedback */
         }
 
         a.login-link {
             text-decoration: none;
-            color: #007bff;
-            margin-top: 10px;
-            display: block;
+            color: #AA336A;
+            margin-top: 20px; /* Increased margin for better spacing */
+            display: inline-block; /* Changed to inline-block for better alignment */
+        }
+
+        a.login-link:hover {
+            color: #8E235C; /* Darker color on hover for better feedback */
         }
     </style>
 </head>
-<body>
+<body style="background-color: #FFC0CB;">
     <div class="login-container">
         <h2>Login</h2>
 
@@ -84,7 +103,7 @@
 
                 <button class="signup-button"> Log in </button><br>
 
-                <a style="color:#AA336A;" class="login-link" href="{% url 'index'%}">Back To Home</a>
+                <a class="login-link" href="{% url 'index'%}">Back To Home</a>
             </ul>
         </form>
     </div>
